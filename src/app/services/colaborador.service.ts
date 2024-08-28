@@ -18,8 +18,13 @@ export class ColaboradorService {
     return this._http.post(this.url+'login_admin',data, {headers: headers});
   }
 
-  registro_colaborador_admin(data:any): Observable<any> {
-    let headers = new HttpHeaders().set('Content-Type', 'application/json');
+  registro_colaborador_admin(data:any, token:any): Observable<any> {
+    let headers = new HttpHeaders({'Content-Type': 'application/json', 'Authorization': token});
     return this._http.post<any>(this.url+'registro_colaborador_admin',data, {headers: headers});
+  }
+
+  listar_colaboradores(token:any): Observable<any> {
+    let headers = new HttpHeaders({'Content-Type': 'application/json', 'Authorization': token});
+    return this._http.get<any>(this.url+'listar_colaboradores', {headers: headers});
   }
 }

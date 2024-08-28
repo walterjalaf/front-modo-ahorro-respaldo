@@ -28,10 +28,10 @@ export class CreateColaboradorComponent implements OnInit {
   registrar(registroForm:any){
 
     if(registroForm.valid){
-      
+
       this.btn_registrar = true;
 
-      this._colaboradorService.registro_colaborador_admin(this.colaborador).subscribe(
+      this._colaboradorService.registro_colaborador_admin(this.colaborador, this.token).subscribe(
         response=>{
           console.log(response);
 
