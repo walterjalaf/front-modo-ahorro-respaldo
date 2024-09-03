@@ -22,6 +22,13 @@ import { IndexInventarioComponent } from './components/inventario/index-inventar
 import { CreateInventarioComponent } from './components/inventario/create-inventario/create-inventario.component';
 import { InventarioGeneralComponent } from './components/inventario/inventario-general/inventario-general.component';
 import { PieChartComponent } from './components/inventario/inventario-general/pie-chart/pie-chart.component';
+import { TablaComponent } from './components/inventario/inventario-general/tabla/tabla.component';
+import { FormularioComponent } from './components/inventario/inventario-general/formulario/formulario.component';
+
+import { LineChartComponent } from './components/dashboard/line-chart/line-chart.component';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { PerfilGestorComponent } from './components/gestor/perfil-gestor/perfil-gestor.component';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +46,14 @@ import { PieChartComponent } from './components/inventario/inventario-general/pi
     IndexInventarioComponent,
     CreateInventarioComponent,
     InventarioGeneralComponent,
-    PieChartComponent
+    PieChartComponent,
+    TablaComponent,
+    FormularioComponent,
+
+    LineChartComponent,
+    NotfoundComponent,
+    PerfilGestorComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,103 @@
+<!--begin::Wizard Form-->
+<form class="form" id="kt_form" #registroForm = "ngForm" (ngSubmit)="registrar_datos(registroForm)" >
+  <div class="row justify-content-center">
+      <div class="col-xl-9">
+          <!--begin::Wizard Step 1-->
+          <div class="my-5 step" data-wizard-type="step-content" data-wizard-state="current">
+              <h5 class="text-dark font-weight-bold mb-10">Inventario General</h5>
+
+              <!--begin::Group-->
+              <div class="form-group row">
+                <label class="col-xl-3 col-lg-3 col-form-label">Tipo de Energía</label>
+                <div class="col-lg-9 col-xl-9">
+                  <select name="fuente_de_energia"
+                  class="form-control form-control-solid form-control-lg"
+                  [(ngModel)]="datos.fuente_de_energia" >
+                      <option value="Energía Eléctrica" selected disabled>Energía Eléctrica</option>
+
+                      <option value="Energía Eléctrica" >Energía Eléctrica</option>
+                      <option value="Gas Natural">Gas Natural</option>
+                      <option value="Gas Oil">Gas Oil</option>
+                      <option value="Gas licuado de petroleo (GLP)">Gas licuado de petroleo (GLP)</option>
+                      <option value="Leña">Leña</option>
+                      <option value="Otras Fuentes Energéticas">Otras Fuentes Energéticas </option>
+
+
+                  </select>
+              </div>
+            </div>
+            <!--end::Group-->
+
+              <!--begin::Group-->
+              <div class="form-group row">
+                  <label class="col-xl-3 col-lg-3 col-form-label">Equipo</label>
+                  <div class="col-lg-9 col-xl-9">
+                      <input class="form-control form-control-solid form-control-lg" name="equipos_Principales"
+                      [(ngModel)]="datos.equipos_Principales"
+                      required type="text" placeholder="Nombre Equipo "/>
+                  </div>
+              </div>
+              <!--end::Group-->
+
+
+
+
+
+              <!--begin::Group-->
+              <div class="form-group row">
+                <label class="col-xl-3 col-lg-3 col-form-label">Distribución por uso</label>
+                <div class="col-lg-9 col-xl-9">
+                  <select name="dist_por_uso"
+                  [(ngModel)]="datos.dist_por_uso"
+                  class="form-control form-control-solid form-control-lg">
+                      <option value="" selected disabled>Elegir uso</option>
+
+                      <option value="1" >Climatización</option>
+                      <option value="0">Electrodoméstico</option>
+                      <option value="0">Dispositivo de Red</option>
+                      <option value="0">Oficina</option>
+                      <option value="0">Iluminación</option>
+                      <option value="0">Seguridad </option>
+                      <option value="0">Comunicación </option>
+
+
+                  </select>
+              </div>
+            </div>
+            <!--end::Group-->
+              <!--begin::Group-->
+              <div class="form-group row">
+                <label class="col-xl-3 col-lg-3 col-form-label">Consumo nominal (KWh)</label>
+                <div class="col-lg-9 col-xl-9">
+                    <input class="form-control form-control-solid form-control-lg" name="consumo_nominal"
+                    [(ngModel)]="datos.consumo_nominal"
+                      required type="text" placeholder="Medida en (kWh) "/>
+
+
+                </div>
+
+              </div>
+              <!--end::Group-->
+              <!--begin::Group-->
+              <div class="form-group row">
+                <label class="col-xl-3 col-lg-3 col-form-label">Sumatoria Relevamiento (KWh)</label>
+                <div class="col-lg-9 col-xl-9">
+                    <input class="form-control form-control-solid form-control-lg" name="sumatoria_relevamiento"
+                    [(ngModel)]="datos.sumatoria_relevamiento"
+                      required type="text" placeholder="Medida en (kWh)"/>
+
+                </div>
+
+              </div>
+              <!--end::Group-->
+              <div>
+                <button class="btn btn-primary" type="submit" [routerLink]="['/General']">
+                  Agregar Componente
+                </button>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</form>
+<!--end::Wizard Form-->

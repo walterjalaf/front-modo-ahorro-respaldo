@@ -117,10 +117,38 @@
 
                                                   <td class="pr-0 text-left">
                                                     <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                                                      <button type="button" class="btn btn-danger">Eliminar</button>
+                                                      <button type="button" class="btn btn-danger" data-toggle="modal" [attr.data-target]="'#delete-'+empresa.empresa_id" >Eliminar</button>
 
                                                       <button type="button" class="btn btn-success">Actualizar</button>
                                                     </div>
+                                                    <!-- Inicio Modal -->
+                                                    <div class="modal fade" id="delete-{{empresa.empresa_id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                      <div class="modal-dialog" role="document">
+                                                          <div class="modal-content">
+                                                              <div class="modal-header">
+                                                                  <h5 class="modal-title" id="exampleModalLabel">Title Modal</h5>
+                                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                      <i aria-hidden="true" class="ki ki-close"></i>
+                                                                  </button>
+                                                              </div>
+                                                              <div class="modal-body">
+                                                                  <h5>¿Esta seguro de eliminar esta empresa? </h5>
+                                                                  <p>Al eliminar esta empresa se borrarn todos los datos de forma permanente.</p>
+                                                              </div>
+                                                              <div class="modal-footer">
+                                                                  <button type="button" class="btn btn-warning font-weight-bold" data-dismiss="modal"
+
+                                                                  >Cerrar</button>
+                                                                  <button type="button" class="btn btn-danger font-weight-bold"
+                                                                  (click)="delete_empresa(empresa.empresa_id )"
+                                                                  >Eliminar</button>
+
+
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                    </div>
+                                                    <!-- Fin Modal -->
 
 
                                                   </td>

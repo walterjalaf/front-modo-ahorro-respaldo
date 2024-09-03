@@ -1,0 +1,83 @@
+
+
+<!-- *********************************************************************************************************** -->
+
+<!--begin: Search Form-->
+<div class="row">
+  <div class="col-12">
+
+      <div class="table-responsive">
+
+          <table class="table table-sm ">
+              <thead>
+                  <tr class="text-left text-uppercase">
+                      <th style="min-width: 250px" class="pl-7">
+                          <span class="text-dark-75">Fuente de Energía</span>
+                      </th>
+                      <th style="min-width: 250px" class="pl-7">
+                          <span class="text-dark-75">Equipo Principal</span>
+                      </th>
+                      <th style="min-width: 250px" class="pl-7">
+                          <span class="text-dark-75">Distribución por uso</span>
+                      </th>
+
+
+                      <th style="min-width: 50px"></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let datos of datosInventarioGeneral | paginate: { itemsPerPage: noOfRows, currentPage: page }" style="cursor: pointer;">
+                      <td class="pl-3 py-3">
+                          <div class="d-flex align-items-center">
+
+                              <div>
+                                  <a class="text-danger font-weight-bolder text-hover-primary mb-1 font-size-lg">
+                                    {{datos.fuente_de_energia}}
+                                  </a>
+                                  <span class="text-muted font-weight-bold d-block"></span>
+                              </div>
+                          </div>
+                      </td>
+
+                      <td>
+                          <span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{datos.equipos_Principales}}</span>
+
+                      </td>
+                      <td><span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{datos.dist_por_uso}}</span>
+
+                      </td>
+
+
+
+                      <td class="pr-0 text-left" >
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                          <button type="button" class="btn btn-light">Eliminar</button>
+
+                          <button type="button" class="btn btn-light">Actualizar</button>
+
+                        </div>
+
+
+                      </td>
+                  </tr>
+
+              </tbody>
+
+          </table>
+      </div>
+      <pagination-controls (pageChange)="page = $event"></pagination-controls>
+
+      <pagination-template #p="paginationApi"
+                          (pageChange)="page=($event)"
+                          >
+
+            <div class="form-group" [class.disabled]="p.isFirstPage()">
+              <div class="item-par-page">
+            </div>
+            </div>
+
+      </pagination-template>
+  </div>
+
+</div>
+<!-- end: Search Form -->

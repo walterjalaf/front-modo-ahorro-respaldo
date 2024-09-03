@@ -30,4 +30,13 @@ export class IndexEmpresaComponent {
   }
 
   filtrar_empresa(){}
+
+  delete_empresa (id:any) {
+
+    console.log({id});
+
+
+
+  }
+
 }

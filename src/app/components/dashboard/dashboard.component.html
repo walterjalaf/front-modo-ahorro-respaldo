@@ -7,12 +7,12 @@
           <!--begin::Content-->
           <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
               <!--begin::Subheader-->
-              <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
+              <div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader" style="background-color: yellowgreen;">
                   <div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
                       <!--begin::Info-->
                       <div class="d-flex align-items-center flex-wrap mr-2">
 
-                          <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm" style="width: 150px ;height: 50px; align-content: center;">Add New</a>
+                          <a href="#" class="btn btn-light-danger font-weight-bolder btn-sm" style="width: 150px ;height: 50px; align-content: center;">Nuevo Informe</a>
                           <!--end::Actions-->
                       </div>
                       <!--end::Info-->
@@ -23,6 +23,29 @@
               <div class="d-flex flex-column-fluid">
                   <!--begin::Container-->
                   <div class="container">
+
+                    <div class="row"  >
+
+                        <div class="card text-bg-danger mb-3"  style="width: 100%; height: 500px;">
+                          <div class="card-header">DATOS ACTUALES DE LA EMPRESA</div>
+                          <div class="card-body">
+                            <h5 class="card-title">ENERGÍA ELLÉCTRICA</h5>
+                            <div class="container">
+                              <app-line-chart></app-line-chart>
+
+
+
+                            </div>
+                          </div>
+                        </div>
+
+
+
+
+
+
+                    <app-tabla></app-tabla>
+
 
 
                   </div>

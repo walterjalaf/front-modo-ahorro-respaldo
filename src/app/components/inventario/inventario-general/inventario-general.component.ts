@@ -30,7 +30,13 @@ export class InventarioGeneralComponent {
 
     // Listar registros
 
-    
+    registrar_datos (registroForm: any){
+
+      this._inventarioService.datosInventarioGeneral.push(registroForm)
+
+    }
+
+
 
 
 

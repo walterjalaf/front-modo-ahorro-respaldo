@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ColaboradorService } from '../../../services/colaborador.service';
+declare var $: any;
+
 
 @Component({
   selector: 'app-index-colaborador',
@@ -16,6 +18,8 @@ export class IndexColaboradorComponent implements OnInit{
   public page = 1;
   public noOfRows: number = 6;
 
+  public load_estado: boolean = false;
+
 
   constructor ( private _colaboradorService: ColaboradorService) {}
 
@@ -30,6 +34,21 @@ export class IndexColaboradorComponent implements OnInit{
 
       }
     )
+  }
+
+  set_state (id: any, state: any) {
+    this.load_estado = true;
+
+    this._colaboradorService.cambiar_estado_colaborador_admin(id, {estado: state}, this.token).subscribe(
+      res => {
+        this.load_estado = false;
+        $('#delete-'+id).modal('hide');
+        this.init_data()
+      }
+
+    )
+
+
   }
 
   filtrar_colaborador(){

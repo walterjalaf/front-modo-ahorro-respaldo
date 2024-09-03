@@ -1,203 +1,150 @@
 <div class="d-flex flex-column flex-root">
   <div class="d-flex flex-row flex-column-fluid page">
       <app-sidebar></app-sidebar>
-      <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
-          <app-top></app-top>
+      <!-- Inicio Wrapper -->
+      <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper" >
 
-          <!--begin::Content-->
-          <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-
+        <app-top></app-top>
             <div class="row">
+              <div class="col-10">
 
+              </div>
+              <div class="col-2 mb-10">
+                <a class="btn btn-primary" [routerLink]="['/inventario']" style="width: 200px; height: 35px; text-align: center;"> <strong>Regresar</strong></a>
 
-              <div class="col">
-                <div class="card-body p-0">
-                  <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
-                      <div class="col-xl-12 col-xxl-10">
-                          <!--begin::Wizard Form-->
-                          <form class="form" id="kt_form" #registroForm = "ngForm"  >
-                              <div class="row justify-content-center">
-                                  <div class="col-xl-9">
-                                      <!--begin::Wizard Step 1-->
-                                      <div class="my-5 step" data-wizard-type="step-content" data-wizard-state="current">
-                                          <h5 class="text-dark font-weight-bold mb-10">Inventario General</h5>
+              </div>
 
-                                          <!--begin::Group-->
-                                          <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Tipo de Energía</label>
-                                            <div class="col-lg-9 col-xl-9">
-                                              <select name="estado"
-                                              class="form-control form-control-solid form-control-lg">
-                                                  <option value="" selected disabled>Energía Eléctrica</option>
+            </div>
 
-                                                  <option value="1" >Energía Eléctrica</option>
-                                                  <option value="0">Gas Natural</option>
-                                                  <option value="0">Gas Oil</option>
-                                                  <option value="0">Gas licuado de petroleo (GLP)</option>
-                                                  <option value="0">Leña</option>
-                                                  <option value="0">Otras Fuentes Energéticas </option>
-
-
-                                              </select>
-                                          </div>
-                                        </div>
-                                        <!--end::Group-->
-
-                                          <!--begin::Group-->
-                                          <div class="form-group row">
-                                              <label class="col-xl-3 col-lg-3 col-form-label">Equipo</label>
-                                              <div class="col-lg-9 col-xl-9">
-                                                  <input class="form-control form-control-solid form-control-lg" name="colaborador_nombre"  required type="text" placeholder="Nombres "/>
-                                              </div>
-                                          </div>
-                                          <!--end::Group-->
+            <!-- <h1>Inventario General Relevado</h1> -->
+            <div class="card-toolbar">
 
 
 
-
-
-                                          <!--begin::Group-->
-                                          <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Distribución por uso</label>
-                                            <div class="col-lg-9 col-xl-9">
-                                              <select name="estado"
-                                              class="form-control form-control-solid form-control-lg">
-                                                  <option value="" selected disabled>Elegir uso</option>
-
-                                                  <option value="1" >Climatización</option>
-                                                  <option value="0">Electrodoméstico</option>
-                                                  <option value="0">Dispositivo de Red</option>
-                                                  <option value="0">Oficina</option>
-                                                  <option value="0">Iluminación</option>
-                                                  <option value="0">Seguridad </option>
-                                                  <option value="0">Comunicación </option>
-
-
-                                              </select>
-                                          </div>
-                                        </div>
-                                        <!--end::Group-->
-                                          <!--begin::Group-->
-                                          <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Consumo nominal (KWh)</label>
-                                            <div class="col-lg-9 col-xl-9">
-                                                <input class="form-control form-control-solid form-control-lg" name="colaborador_nombre"  required type="text" placeholder="Nombres "/>
-                                                
-
-                                            </div>
-
-                                          </div>
-                                          <!--end::Group-->
-                                          <!--begin::Group-->
-                                          <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Sumatoria Relevamiento (KWh)</label>
-                                            <div class="col-lg-9 col-xl-9">
-                                                <input class="form-control form-control-solid form-control-lg" name="colaborador_nombre"  required type="text" placeholder="Nombres "/>
-
-                                            </div>
-
-                                          </div>
-                                          <!--end::Group-->
-                                          <!--begin::Group-->
-                                          <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Sumatoria Relevamiento (KWh)</label>
-                                            <div class="col-lg-9 col-xl-9">
-                                                <input class="form-control form-control-solid form-control-lg" name="colaborador_nombre"  required type="text" placeholder="Nombres "/>
-
-                                            </div>
-
-                                          </div>
-                                          <!--end::Group-->
-
-                                      </div>
-                                      <!--end::Wizard Step 1-->
-
-                                      <!--begin::Wizard Actions-->
-                                      <div class="d-flex justify-content-between border-top pt-10 mt-15">
-
-
-                                          <div>
-                                            <button class="btn btn-primary" [routerLink]="['/General'] "> Agregar Datos</button>
+              <!-- Inicio Container -->
+              <div class="container-fluid" >
+                <!-- Container card show less -->
 
 
 
-                                          </div>
-                                      </div>
-                                      <!--end::Wizard Actions-->
-                                  </div>
-                              </div>
-                          </form>
-                          <!--end::Wizard Form-->
+                  <!-- Inicio Row 1 -->
+                <div class="row mb-4" id="row-1" >
+                  <!-- Inicio row 1 - columna 1 -->
+                  <div class="col-6" id="col-seis">
+                    <!-- <div  class="card card-custom mb-4"> -->
+                      <div class="card card-custom m-8 p-8">
+                       <div class="row ">
+                        <div class="col">
+                          <h3 class="card-title mb-4">INVENTARIO GENERAL RELEVADO </h3>
+                          <button
+                          class="btn btn-primary" type="button"
+                          style="width: 200px; height: 50px; align-content: center; padding-left: 0;"
+                          data-toggle="modal" [attr.data-target]="'#delete-'"
+                          > <strong> NUEVO EQUIPO</strong></button>
+
+
+                        </div>
+
+
+
+                       </div>
+                       <div class="row" >
+                        <table class="table mt-4">
+                          <thead>
+                            <tr>
+                              <th scope="col">Fuente de Energía</th>
+                              <th scope="col">Consumos Energéticos Reales</th>
+                              <th scope="col">Sumatoria Relevamiento</th>
+                              <th scope="col">Porcentaje</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Energía Eléctrica</td>
+                              <td>40.5160 kWh</td>
+                              <td>40.348 kWh</td>
+                              <td>100%</td>
+                            </tr>
+                            <tr>
+                              <td scope="row">Gas Natural</td>
+                              <td>0 m3</td>
+                              <td>0 m3</td>
+                              <td>0 %</td>
+                            </tr>
+                            <tr>
+                              <td scope="row">Gas Oil</td>
+                              <td >39.544 L</td>
+                              <td>39.480 L</td>
+                              <td>100 %</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+
+                       </div>
+
+
+
                       </div>
-                  </div>
-              </div>
 
+                    <!-- Inicio Modal -->
+                    <div class="modal fade" id="delete-" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-xl" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Nuevo equipo eléctrico</h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <i aria-hidden="true" class="ki ki-close"></i>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+                                  <app-formulario></app-formulario>
+                              </div>
 
-
-              </div>
-              <div class="col">
-                <div class="card-body p-1">
-                  <div class="row justify-content-center py-8 px-8 py-lg-15 px-lg-10">
-                    <app-pie-chart></app-pie-chart>
-                    <h4>Listado</h4>
-                  <ul class="list-group ">
-                    <li *ngFor="let datos of datosInventarioGeneral;
-
-                    let i = index;
-                    let isLast = last;
-                    let isEven = even;"
-
-                      class="list-group-item d-flex justify-content-between align-items-center"
-                      [ngClass]="{
-                        'list-group-item-primary': isEven,
-                        'list-group-item-dark': isLast,
-                      }">
-                    <div>
-                      <span class="text-primary"> {{ i+1 }} . </span>
-                      <span>{{datos.fuente_de_energia}} - </span>
-                      <strong>Equipo: </strong>
-                      <span>{{datos.equipos_Principales}}</span>
+                          </div>
+                      </div>
                     </div>
-
-                    <button
-
-                    class="btn btn-danger ml-2" >
-                      Eliminar
-                    </button>
-
-
-
-                    </li>
-
-                  </ul>
+                    <!-- Fin Modal -->
 
                   </div>
+                  <!-- Fin row 1 - columna 1 -->
+
+                  <!-- Inicio row 1 - columna 2 -->
+                  <div class="col-6 mb-10">
+                    <app-pie-chart></app-pie-chart>
+
+                  </div>
+                  <!-- Fin row 1 - columna 2 -->
+
 
 
                 </div>
+                <!-- Fin Row 1 -->
 
 
 
+                <!-- Inicio Row 2 -->
+                <div class="row" id="row-1">
 
-              </div>
+                  <app-tabla></app-tabla>
 
-            </div>
-            <div class="row">
-              <div class="card-body p-1">
-
-
-              </div>
+                </div>
+                <!-- Fin Row 2 -->
 
 
+              <!-- Fin container -->
+                </div>
 
-            </div>
 
-
-          </div>
-          <!--end::Content-->
+        </div>
       </div>
+      <!-- Fin wrapper -->
+
+
   </div>
 </div>
+
+
 
 
 
