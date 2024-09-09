@@ -10,6 +10,7 @@ import { CreateEmpresaComponent } from './components/empresa/create-empresa/crea
 import { IndexInventarioComponent } from './components/inventario/index-inventario/index-inventario.component';
 import { CreateInventarioComponent } from './components/inventario/create-inventario/create-inventario.component';
 import { InventarioGeneralComponent } from './components/inventario/inventario-general/inventario-general.component';
+import { PerfilGestorComponent } from './components/gestor/perfil-gestor/perfil-gestor.component';
 
 
 const appRoutes: Routes = [
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
  {path: 'empresa/create' , component: CreateEmpresaComponent},
  {path: 'inventario', component: IndexInventarioComponent},
  {path: 'inventario/create', component: CreateInventarioComponent},
- {path: 'General', component: InventarioGeneralComponent}
+ {path: 'General', component: InventarioGeneralComponent},
+ {path: 'Perfil', component:PerfilGestorComponent }
 
 
 

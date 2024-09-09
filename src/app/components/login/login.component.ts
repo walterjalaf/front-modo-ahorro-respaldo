@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ColaboradorService } from '../../services/colaborador.service';
+
 import { Router } from '@angular/router';
+import { GestorService } from '../../services/gestor.service';
 declare var $:any
 
 
@@ -18,22 +19,29 @@ export class LoginComponent implements OnInit{
   public token: any = localStorage.getItem('token')
 
   constructor (
-    private _colaboradorService: ColaboradorService,
+    private _gestorService: GestorService,
     private _router: Router
   ){}
 
   ngOnInit(): void {
-  if(this.token){
-    this._router.navigate(['/dashboard'])
-  }
+  // if(this.token){
+  //   this._router.navigate(['/dashboard'])
+  // } else {
+  //   this._router.navigate([''])
+  // }
+
   }
 
   login(loginForm:any){
 
     if (loginForm.valid) {
-      this._colaboradorService.login_admin(this.user).subscribe(
+
+      console.log(this.user);
+
+      this._gestorService.login_gestor(this.user).subscribe(
         res =>{
-          console.log(res);
+
+
           if (res.data == undefined) {
 
             $.notify(res.message, {
@@ -53,7 +61,7 @@ export class LoginComponent implements OnInit{
           } else {
               localStorage.setItem('token', res.token);
               localStorage.setItem('user', JSON.stringify(res.data))
-              localStorage.setItem('colaborador_id', res.data.colaborador_id)
+              localStorage.setItem('gestor_id', res.data.gestor_id)
               this._router.navigate(['/dashboard'])
 
           }
