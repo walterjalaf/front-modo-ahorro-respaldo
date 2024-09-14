@@ -1,0 +1,469 @@
+
+
+<div class="example-container">
+  <mat-stepper #stepper>
+    <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Datos Generales</ng-template>
+        <h3>Información General</h3>
+        <hr>
+
+
+        <div id="fila 1" class="example-container">
+          <mat-form-field>
+            <mat-label>Nombre de la Empresa</mat-label>
+            <input matInput placeholder="Nombre" formControlName="firstCtrl" >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Tamaño de la Empresa</mat-label>
+            <mat-select>
+              <mat-option value="micro"> Micro </mat-option>
+              <mat-option value="pequeña">Pequeña</mat-option>
+              <mat-option value="mediana_tramo_1">Mediana Tramo 1</mat-option>
+              <mat-option value="mediana_tramo_2">Mediana Tramo 2</mat-option>
+            </mat-select>
+
+          </mat-form-field>
+          <mat-form-field style="margin-top: 0;">
+            <mat-label>Número de Empleados</mat-label>
+           <input matInput type="number" placeholder="" formControlName="firstCtrl" >
+
+          </mat-form-field>
+
+
+        </div>
+
+        <div style="display: flex; align-items: flex-start;">
+
+            <mat-form-field>
+              <mat-label>Rubro</mat-label>
+              <input matInput placeholder="Actividad Económica" formControlName="firstCtrl" >
+
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Código de Actividad" formControlName="firstCtrl" >
+
+            </mat-form-field>
+
+
+          </div>
+          <p>
+            <mat-form-field>
+              <mat-label>Cuit</mat-label>
+              <input matInput placeholder="Cuit" formControlName="firstCtrl" >
+            </mat-form-field>
+
+          </p>
+
+          <p>
+            <mat-form-field>
+              <mat-label>Teléfono</mat-label>
+              <input matInput placeholder="  -  -  " formControlName="firstCtrl" >
+            </mat-form-field>
+
+          </p>
+
+          <div class="example-container">
+            <mat-form-field>
+              <mat-label>Enter your email</mat-label>
+              <input
+                matInput
+                placeholder="pat@example.com"
+                [formControl]="email"
+                (blur)="updateErrorMessage()"
+
+              />
+
+            </mat-form-field>
+          </div>
+          <div>
+            <label>Sede: </label>
+            <mat-radio-group [formControl]="floatLabelControl">
+              <mat-radio-button value="auto">Central</mat-radio-button>
+              <mat-radio-button value="always">Sucursal</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+        <h3>Ubicación Empresa</h3>
+        <hr>
+        <div  style="display: flex; flex-direction: column; align-items: flex-start;">
+
+
+          <p>
+            <mat-form-field>
+              <mat-label>Provincia</mat-label>
+            <mat-select>
+              <mat-option value="micro"> San Juan </mat-option>
+              <mat-option value="pequeña">Mendoza</mat-option>
+              <mat-option value="mediana_tramo_1">La Rioja</mat-option>
+              <mat-option value="mediana_tramo_2">San Luis</mat-option>
+            </mat-select>
+
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Departamento</mat-label>
+            <mat-select>
+              <mat-option value="micro"> Chimbas </mat-option>
+              <mat-option value="pequeña">Capital</mat-option>
+              <mat-option value="mediana_tramo_1">Rawson</mat-option>
+              <mat-option value="mediana_tramo_2">Caucete</mat-option>
+            </mat-select>
+
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Ciudad</mat-label>
+            <mat-select>
+              <mat-option value="micro"> Chimbas </mat-option>
+              <mat-option value="pequeña">Capital</mat-option>
+              <mat-option value="mediana_tramo_1">Rawson</mat-option>
+              <mat-option value="mediana_tramo_2">Caucete</mat-option>
+            </mat-select>
+
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Código Postal</mat-label>
+            <input matInput type="number" placeholder="Código de Actividad" formControlName="firstCtrl" >
+
+            </mat-form-field>
+
+
+        </p>
+
+      </div>
+
+
+
+
+
+      <p >
+        <mat-form-field style="width: 1200px;">
+          <mat-label>Domicilio</mat-label>
+          <textarea matInput></textarea>
+        </mat-form-field>
+      </p>
+      <div>
+
+          <button class="btn btn-primary" mat-button matStepperNext>Next</button>
+        </div>
+
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" errorMessage="Address is required.">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Superficie y Ubicación</ng-template>
+        <h3>Domicilio Fiscal</h3>
+        <hr>
+        <p>
+          <mat-form-field>
+            <mat-label>Provincia</mat-label>
+          <mat-select>
+            <mat-option value="micro"> San Juan </mat-option>
+            <mat-option value="pequeña">Mendoza</mat-option>
+            <mat-option value="mediana_tramo_1">La Rioja</mat-option>
+            <mat-option value="mediana_tramo_2">San Luis</mat-option>
+          </mat-select>
+
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Departamento</mat-label>
+          <mat-select>
+            <mat-option value="micro"> Chimbas </mat-option>
+            <mat-option value="pequeña">Capital</mat-option>
+            <mat-option value="mediana_tramo_1">Rawson</mat-option>
+            <mat-option value="mediana_tramo_2">Caucete</mat-option>
+          </mat-select>
+
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Ciudad</mat-label>
+          <mat-select>
+            <mat-option value="micro"> Chimbas </mat-option>
+            <mat-option value="pequeña">Capital</mat-option>
+            <mat-option value="mediana_tramo_1">Rawson</mat-option>
+            <mat-option value="mediana_tramo_2">Caucete</mat-option>
+          </mat-select>
+
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Código Postal</mat-label>
+          <input matInput type="number" placeholder="Código de Actividad" formControlName="firstCtrl" >
+
+          </mat-form-field>
+
+
+        </p>
+
+        <p>
+          <mat-form-field style="width: 1200px;">
+            <mat-label>Domicilio</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+        </p>
+        <h3>Superficie</h3>
+        <hr>
+        <div class="example-container">
+          <mat-form-field floatLabel="always">
+            <mat-label>Cubierta</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" />
+
+            <span matTextSuffix>m<sup>2</sup></span>
+          </mat-form-field>
+          <mat-form-field floatLabel="always">
+            <mat-label>Semi-Cubierta</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" />
+
+            <span matTextSuffix>m<sup>2</sup></span>
+          </mat-form-field>
+          <mat-form-field floatLabel="always">
+            <mat-label>Descubierta</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" />
+
+            <span matTextSuffix>m<sup>2</sup></span>
+          </mat-form-field>
+
+
+        </div>
+
+
+        <div>
+          <label>Tipo de nivel de Superficie: </label>
+          <mat-radio-group [formControl]="floatLabelControl">
+            <mat-radio-button value="auto">Nivelado</mat-radio-button>
+            <mat-radio-button value="always">Desnivelado</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+
+        <div>
+          <mat-form-field>
+            <mat-label>Tipo de configuración de Superficie </mat-label>
+          <mat-select>
+            <mat-option value="cementado">Cementado</mat-option>
+            <mat-option value="pedregoso">Pedregoso</mat-option>
+            <mat-option value="rocoso">Rocoso</mat-option>
+            <mat-option value="arcilloso">Arcilloso</mat-option>
+            <mat-option value="arenoso">Arenoso</mat-option>
+            <mat-option value="pantanoso">Pantanoso</mat-option>
+            <mat-option value="de_relleno">De relleno</mat-option>
+            <mat-option value="mixto">Mixto</mat-option>
+            <mat-option value="otro">Otro</mat-option>
+          </mat-select>
+          </mat-form-field>
+
+        </div>
+
+
+        <div>
+
+          <button class="btn btn-light" mat-button matStepperPrevious>Volver</button>
+          <button class="btn btn-primary m-6" matStepperNext>Siguiente</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="tercerFormGroup">
+      <form [formGroup]="tercerFormGroup">
+        <ng-template matStepLabel>Facturación y Rangos de Inversión</ng-template>
+
+        <div class="example-container">
+          <mat-form-field floatLabel="always">
+            <mat-label>Facturación Anual sin IVA en el año base</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" formControlName="tercerCtrl" />
+            <span matTextPrefix>$&nbsp;</span>
+
+          </mat-form-field>
+
+
+        </div>
+
+
+        <div>
+          <mat-label>Rango de inversión para mejoras</mat-label>
+          <mat-slider min="200" max="500">
+            <input value="300" matSliderStartThumb>
+            <input value="400" matSliderEndThumb>
+          </mat-slider>
+        </div>
+
+
+        <div>
+          <mat-label>Rango de plazos de Amortiguación</mat-label>
+          <mat-slider min="200" max="500">
+            <input value="300" matSliderStartThumb>
+            <input value="400" matSliderEndThumb>
+          </mat-slider>
+        </div>
+
+
+        <div>
+          <label>¿ La empresa puede adherirse a un crédito de inversión?</label>
+          <mat-radio-group [formControl]="floatLabelControl">
+            <mat-radio-button value="auto">Sí</mat-radio-button>
+            <mat-radio-button value="always">No</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+
+      </form>
+      <div>
+
+        <button class="btn btn-light" mat-button matStepperPrevious>Volver</button>
+        <button class="btn btn-primary m-6" matStepperNext>Siguiente</button>
+      </div>
+
+    </mat-step>
+    <mat-step [stepControl]="cuartoFormGroup">
+      <form [formGroup]="cuartoFormGroup">
+        <ng-template matStepLabel>Contactos</ng-template>
+        <div id="fila 1" class="example-container">
+          <mat-form-field>
+            <mat-label>Nombre  </mat-label>
+            <input matInput placeholder="Nombre"  >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Apellido </mat-label>
+            <input matInput placeholder="Apellido"  >
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>Teléfono</mat-label>
+            <input matInput placeholder="  -  -  "  >
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              placeholder="pat@example.com"
+              [formControl]="email"
+              (blur)="updateErrorMessage()"
+
+            />
+
+          </mat-form-field>
+
+        </div>
+        <div >
+          <mat-form-field style="width: 800px;">
+            <mat-label>Cargo</mat-label>
+            <input matInput   >
+          </mat-form-field>
+        </div>
+
+        <div class="example-container">
+
+        </div>
+        <div id="horario-individualizado-de-reserva">
+          <section >
+            <h3>Días de contacto sugeridos</h3>
+            <mat-button-toggle-group
+              name="ingredients"
+              aria-label="Ingredients"
+              [hideMultipleSelectionIndicator]="hideMultipleSelectionIndicator()"
+              multiple
+            >
+              <mat-button-toggle value="flour">LUN.</mat-button-toggle>
+              <mat-button-toggle value="eggs">MAR.</mat-button-toggle>
+              <mat-button-toggle value="sugar">MIÉ.</mat-button-toggle>
+              <mat-button-toggle value="sugar">JUE.</mat-button-toggle>
+              <mat-button-toggle value="sugar">VIE.</mat-button-toggle>
+              <mat-button-toggle value="sugar">SAB.</mat-button-toggle>
+              <mat-button-toggle value="sugar">DOM.</mat-button-toggle>
+            </mat-button-toggle-group>
+          </section>
+          <section style="margin: 10px;">
+            <mat-label> De  </mat-label>
+            <mat-form-field style="width: 100px; ">
+
+
+              <input matInput type="number" class="example-right-align" placeholder="7"  />
+              <span matTextSuffix> P.M. </span>
+
+
+            </mat-form-field >
+            <mat-label>  Hasta  </mat-label>
+            <mat-form-field style="width: 100px;">
+
+              <input matInput type="number" class="example-right-align" placeholder="18" />
+            <span matTextSuffix>  P.M. </span>
+            </mat-form-field>
+
+
+
+          </section>
+          <div>
+            <button class="btn btn-primary m-6"> + </button> <button class="btn btn-primary m-6"> Agregar Contacto</button>
+          </div>
+
+        </div>
+      </form>
+      <div class="container" id="table">
+        <table cellpadding="10" cellspacing="0">
+          <thead>
+              <tr>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Teléfono</th>
+                  <th>Email</th>
+                  <th>Rol</th>
+                  <th>Días de Contacto Sugerido</th>
+                  <th>Desde</th>
+                  <th>Hasta</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Juan</td>
+                  <td>Pérez</td>
+                  <td>+123456789</td>
+                  <td>'juan.perezexample'.com</td>
+                  <td>Desarrollador</td>
+                  <td>Lunes a Viernes</td>
+                  <td>9:00 AM</td>
+                  <td>5:00 PM</td>
+              </tr>
+              <tr>
+                  <td>María</td>
+                  <td>García</td>
+                  <td>+987654321</td>
+                  <td>maria.garciaexample.com</td>
+                  <td>QA Engineer</td>
+                  <td>Martes a Jueves</td>
+                  <td>10:00 AM</td>
+                  <td>6:00 PM</td>
+              </tr>
+          </tbody>
+      </table>
+
+
+      </div>
+      <div>
+
+        <button class="btn btn-light" mat-button matStepperPrevious>Volver</button>
+        <button class="btn btn-primary m-6" matStepperNext>Siguiente</button>
+      </div>
+
+
+    </mat-step>
+    <mat-step [stepControl]="quintoFormGroup">
+      <form [formGroup]="quintoFormGroup">
+        <ng-template matStepLabel>Régimen de Funcionamiento</ng-template>
+      </form>
+      <div>
+
+        <button class="btn btn-light" mat-button matStepperPrevious>Volver</button>
+        <button class="btn btn-primary m-6" matStepperNext>Siguiente</button>
+      </div>
+
+    </mat-step>
+
+
+
+
+
+  </mat-stepper>
+
+
+
+
+</div>
+

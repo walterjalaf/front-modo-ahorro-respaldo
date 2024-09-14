@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { provideHttpClient } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
@@ -28,7 +28,18 @@ import { FormularioComponent } from './components/inventario/inventario-general/
 import { LineChartComponent } from './components/dashboard/line-chart/line-chart.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { PerfilGestorComponent } from './components/gestor/perfil-gestor/perfil-gestor.component';
-
+import { MatStepperModule } from '@angular/material/stepper';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {CdkStep, CdkStepper, CdkStepperModule} from '@angular/cdk/stepper';
+import { StepperComponent } from './components/empresa/create-empresa/stepper/stepper.component';
+import {provideAnimations} from '@angular/platform-browser/animations';
+import {VERSION as MAT_VERSION, MatNativeDateModule} from '@angular/material/core';
+import {importProvidersFrom} from '@angular/core';
+import {MatSelectModule} from '@angular/material/select';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -53,6 +64,12 @@ import { PerfilGestorComponent } from './components/gestor/perfil-gestor/perfil-
     LineChartComponent,
     NotfoundComponent,
     PerfilGestorComponent,
+    StepperComponent,
+
+
+
+
+
 
   ],
   imports: [
@@ -60,10 +77,22 @@ import { PerfilGestorComponent } from './components/gestor/perfil-gestor/perfil-
     AppRoutingModule,
     routing,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    CdkStepperModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatSliderModule,
+    MatButtonToggleModule
+
 
   ],
-  providers: [ provideHttpClient()],
+  exports: [CdkStepperModule],
+  providers: [ provideHttpClient(),  provideAnimations(),  importProvidersFrom(MatNativeDateModule)],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {  }
