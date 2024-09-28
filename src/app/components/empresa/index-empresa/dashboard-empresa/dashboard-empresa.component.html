@@ -1,0 +1,181 @@
+<div class="d-flex flex-column flex-root">
+  <div class="d-flex flex-row flex-column-fluid page">
+      <app-sidebar></app-sidebar>
+      <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+          <app-top></app-top>
+
+          <!--begin::Dashboard-->
+          <div class="d-flex flex-column-fluid" style="text-align: center;" >
+            <div class="container" >
+              <div class="row"  >
+                <div id="energia-electrica" class="card mb-3" style="max-width: 350px; height: 9rem;">
+
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../../../../../assets/media/svg/graphics/energia-electrica.png" class="img-fluid rounded-start" alt="..." style="height: 8rem; text-align: center;" >
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Energía Eléctrica </h5>
+                        <h1 style="color: red;  -webkit-text-stroke: .5px rgb(245, 112, 112);" > 40.516 kWh </h1>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="gas-natural" class="card mb-3" style="max-width: 350px; height: 9rem;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../../../../../assets/media/svg/graphics/gas-natural.png" class="img-fluid rounded-start" alt="..." style="height: 8rem; text-align: center;" >
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Gas Natural </h5>
+                        <h1 style="color: rgb(221, 255, 0);  -webkit-text-stroke: .5px rgb(204, 218, 5);" > 300 m<sup> 3</sup> </h1>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="gas-oil" class="card mb-3" style="max-width: 350px; height: 9rem;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../../../../../assets/media/svg/graphics/gas-oil.png" class="img-fluid rounded-start" alt="..." style="height: 8rem; text-align: center;" >
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Gas Oil </h5>
+                        <h1 style="color: rgb(113, 112, 112);  -webkit-text-stroke: .5px rgb(3, 3, 3);" > 0 Kilos  </h1>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div id="glp" class="card mb-3" style="max-width: 350px; height: 9rem;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../../../../../assets/media/svg/graphics/glp.png" class="img-fluid rounded-start" alt="..." style="height: 8rem; text-align: center;" >
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Gas Oil </h5>
+                        <h1 style="color: rgb(92, 225, 230);  -webkit-text-stroke: .5px rgb(188, 239, 240);" > 0 Kilos  </h1>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="leña" class="card mb-3" style="max-width: 350px; height: 9rem;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../../../../../assets/media/svg/graphics/leña.png" class="img-fluid rounded-start" alt="..." style="height: 8rem; text-align: center;" >
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Gas Oil </h5>
+                        <h1 style="color:rgb(173, 114, 35);  -webkit-text-stroke: .5px rgb(28, 28, 28)" > 0 Kilos  </h1>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div id="otros" class="card mb-3" style="max-width: 350px; height: 9rem;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="../../../../../assets/media/svg/graphics/otros.png" class="img-fluid rounded-start" alt="..." style="height: 8rem; text-align: center;" >
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+
+                         <h3 style="color:rgb(0, 191, 99);  -webkit-text-stroke: .5px rgb(13, 96, 56)" >  Cargar nueva Fuente Energética</h3>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+              </div>
+              <div class="row">
+                <div class="col-8 mt-5" >
+                  <h3>Datos actuales de la empresa</h3>
+                  <hr>
+                  <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Fuente Energética</th>
+                            <th>Cantidad</th>
+                            <th>Unidad</th>
+                            <th>Total Anual ($)</th>
+                            <th>Costo Unitario Equivalente</th>
+                            <th>Unidad</th>
+                            <th>% Fuente sobre Costos Totales</th>
+                            <th>Consumo $/m <sup>2</sup> cubierto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="table-danger">  <strong>Energía eléctrica</strong></td>
+                            <td class="table-danger" >40.516</td>
+                            <td class="table-danger" >kWh</td>
+                            <td class="table-danger" >738.435</td>
+                            <td class="table-danger" >19,34</td>
+                            <td class="table-danger" >$/kWh</td>
+                            <td class="table-danger" >21%</td>
+                            <td class="table-danger" >2.838,24  $/m <sup>2</sup></td>
+                        </tr>
+                        <tr>
+                            <td class="table-warning"> <strong>Gas natural</strong></td>
+                            <td class="table-warning" >300</td>
+                            <td class="table-warning" >m³</td>
+                            <td class="table-warning" >2.985,572</td>
+                            <td class="table-warning" >75,50</td>
+                            <td class="table-warning" >$/m <sup>3</sup></td>
+                            <td class="table-warning" >79%</td>
+                            <td class="table-warning" >10.816,15 $/m <sup>2</sup></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" style="text-align: right;"><strong>Total de costos:</strong></td>
+                            <td><strong>3200</strong></td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+
+
+                </div>
+                <div class="col-4 mt-5" >
+                  <app-torta></app-torta>
+
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+          <!-- end::dashboard -->
+
+  </div>
+</div>
+
+

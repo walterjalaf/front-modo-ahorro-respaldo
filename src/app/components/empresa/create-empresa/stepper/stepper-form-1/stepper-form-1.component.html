@@ -1,0 +1,148 @@
+
+
+<mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
+  <form [formGroup]="firstFormGroup">
+    <ng-template matStepLabel>Datos Generales</ng-template>
+    <h3>Información General</h3>
+    <hr>
+
+
+    <div id="fila 1" class="example-container">
+      <mat-form-field>
+        <mat-label>Nombre de la Empresa</mat-label>
+        <input matInput placeholder="Nombre" formControlName="firstCtrl" >
+      </mat-form-field>
+      <mat-form-field style="margin-top: 1px;">
+        <mat-label>Tamaño de la Empresa</mat-label>
+        <mat-select>
+          <mat-option value="micro"> Micro </mat-option>
+          <mat-option value="pequeña">Pequeña</mat-option>
+          <mat-option value="mediana_tramo_1">Mediana Tramo 1</mat-option>
+          <mat-option value="mediana_tramo_2">Mediana Tramo 2</mat-option>
+        </mat-select>
+
+      </mat-form-field>
+      <mat-form-field >
+        <mat-label>Número de Empleados</mat-label>
+       <input matInput type="number" placeholder="" formControlName="firstCtrl" >
+
+      </mat-form-field>
+
+
+    </div>
+
+    <div style="display: flex; align-items: flex-start;">
+
+        <mat-form-field>
+          <mat-label>Rubro</mat-label>
+          <input matInput placeholder="Actividad Económica" formControlName="firstCtrl" >
+
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="number" placeholder="Código de Actividad" formControlName="firstCtrl" >
+
+        </mat-form-field>
+
+
+      </div>
+      <p>
+        <mat-form-field>
+          <mat-label>Cuit</mat-label>
+          <input matInput placeholder="Cuit" formControlName="firstCtrl" >
+        </mat-form-field>
+
+      </p>
+
+      <p>
+        <mat-form-field>
+          <mat-label>Teléfono</mat-label>
+          <input matInput placeholder="  -  -  " formControlName="firstCtrl" >
+        </mat-form-field>
+
+      </p>
+
+      <div class="example-container">
+        <mat-form-field>
+          <mat-label>Enter your email</mat-label>
+          <input
+            matInput
+            placeholder="pat@example.com"
+            [formControl]="email"
+            (blur)="updateErrorMessage()"
+
+          />
+
+        </mat-form-field>
+      </div>
+      <div>
+        <label>Sede: </label>
+        <mat-radio-group [formControl]="floatLabelControl">
+          <mat-radio-button value="auto">Central</mat-radio-button>
+          <mat-radio-button value="always">Sucursal</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+    <h3>Ubicación Empresa</h3>
+    <hr>
+    <div  style="display: flex; flex-direction: column; align-items: flex-start;">
+
+
+      <p>
+        <mat-form-field>
+          <mat-label>Provincia</mat-label>
+        <mat-select>
+          <mat-option value="micro"> San Juan </mat-option>
+          <mat-option value="pequeña">Mendoza</mat-option>
+          <mat-option value="mediana_tramo_1">La Rioja</mat-option>
+          <mat-option value="mediana_tramo_2">San Luis</mat-option>
+        </mat-select>
+
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Departamento</mat-label>
+        <mat-select>
+          <mat-option value="micro"> Chimbas </mat-option>
+          <mat-option value="pequeña">Capital</mat-option>
+          <mat-option value="mediana_tramo_1">Rawson</mat-option>
+          <mat-option value="mediana_tramo_2">Caucete</mat-option>
+        </mat-select>
+
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Ciudad</mat-label>
+        <mat-select>
+          <mat-option value="micro"> Chimbas </mat-option>
+          <mat-option value="pequeña">Capital</mat-option>
+          <mat-option value="mediana_tramo_1">Rawson</mat-option>
+          <mat-option value="mediana_tramo_2">Caucete</mat-option>
+        </mat-select>
+
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Código Postal</mat-label>
+        <input matInput type="number" placeholder="Código de Actividad" formControlName="firstCtrl" >
+
+        </mat-form-field>
+
+
+    </p>
+
+  </div>
+
+
+
+
+
+  <p >
+    <mat-form-field style="width: 1200px;">
+      <mat-label>Domicilio</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </p>
+  <div>
+
+      <button class="btn btn-primary" mat-button matStepperNext>Next</button>
+    </div>
+
+  </form>
+</mat-step>

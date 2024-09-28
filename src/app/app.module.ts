@@ -40,6 +40,9 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { StepperForm1Component } from './components/empresa/create-empresa/stepper/stepper-form-1/stepper-form-1.component';
+import { DashboardEmpresaComponent } from './components/empresa/index-empresa/dashboard-empresa/dashboard-empresa.component';
+import { TortaComponent } from './components/empresa/index-empresa/dashboard-empresa/torta/torta.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +68,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     NotfoundComponent,
     PerfilGestorComponent,
     StepperComponent,
+    StepperForm1Component,
+    DashboardEmpresaComponent,
+    TortaComponent,
 
 
 

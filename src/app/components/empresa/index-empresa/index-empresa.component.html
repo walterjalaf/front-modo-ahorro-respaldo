@@ -96,7 +96,9 @@
                                                               <div class="symbol-label">{{empresa.empresa_nombre.substr(0,1)}}</div>
                                                           </div>
                                                           <div>
-                                                              <a class="text-primary font-weight-bolder text-hover-primary mb-1 font-size-lg">
+                                                              <a class="text-primary font-weight-bolder text-hover-primary mb-1 font-size-lg"
+                                                              [routerLink]="['/dashboard-empresa']"
+                                                              >
                                                                 {{empresa.empresa_nombre}}
                                                               </a>
                                                               <span class="text-muted font-weight-bold d-block"></span>
